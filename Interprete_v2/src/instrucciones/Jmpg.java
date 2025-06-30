@@ -15,7 +15,8 @@ public class Jmpg implements Instruccion {
 		int b = ct.pop();
 		int a = ct.pop();
 		if (a > b)
-			new Jmp(valor).ejecutar(ct);
+//			new Jmp(valor).ejecutar(ct);
+			ct.setIp(valor);
 		else
 			ct.incrementarIp();
 
