@@ -1,6 +1,7 @@
 package curiosity.controller;
 
-import java.util.*;
+import java.util.List;
+import java.util.Stack;
 
 import curiosity.controller.command.BackWard;
 import curiosity.controller.command.Command;
@@ -8,7 +9,6 @@ import curiosity.controller.command.Forward;
 import curiosity.controller.command.Left;
 import curiosity.controller.command.Right;
 import curiosity.controller.estrategia.Estrategia;
-import curiosity.controller.estrategia.Parar;
 import curiosity.rover.Rover;
 
 public class RoverController {
@@ -56,6 +56,7 @@ public class RoverController {
 				ip++;
 				if (cmd != null) {
 					undos.add(0, cmd);
+//					undos.push(cmd);
 				}
 			} else {
 				undos.forEach(c -> c.execute(rover));
